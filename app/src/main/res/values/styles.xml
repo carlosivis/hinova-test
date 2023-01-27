@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="TextStyle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TextStyleBold">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyleItalic">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundColor">@color/warm_grey</item>
+        <item name="boxStrokeColor">@color/red</item>
+        <item name="hintTextColor">@color/red</item>
+        <item name="maxLines">1</item>
+    </style>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:id="@+id/factoryImage"
+            android:layout_width="105dp"
+            android:layout_height="80dp"
+            tools:src="@drawable/ic_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            />
+        <TextView
+            style="@style/TextStyleBold"
+            android:id="@+id/factoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/factoryImage"
+            android:layout_marginStart="14dp"
+            tools:text="OFICINA 1"/>
+        <TextView
+            style="@style/TextStyleItalic"
+            android:id="@+id/factoryDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/factoryName"
+            app:layout_constraintStart_toStartOf="@id/factoryName"
+            tools:text="Lanternagem e pintura"/>
+
+        <TextView
+            style="@style/TextStyle"
+            android:id="@+id/factoryPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/factoryDescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/factoryName"
+            tools:text="31 99999-9999"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

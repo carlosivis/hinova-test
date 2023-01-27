@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">hinova</string>
+    <string name="send">ENVIAR</string>
+    <string name="email">Email</string>
+    <string name="phone">Telefone</string>
+    <string name="name">Nome</string>
+    <string name="info_friend">Informações do indicado</string>
+    <string name="phone_user">Telefone do associado</string>
+    <string name="name_user">Nome do Associado</string>
+    <string name="cpf">CPF</string>
+    <string name="info_user">Informações do associado</string>
+</resources>
