@@ -3,19 +3,20 @@ package com.example.hinova.ui.home;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.domain.model.Factory;
 import com.example.hinova.R;
-import com.example.hinova.domain.model.FactoryModel;
 
 import java.util.List;
 
 public class FactoryAdapter extends RecyclerView.Adapter<FactoryAdapter.ViewHolder> {
-    private final List<FactoryModel> factories;
+    private final List<Factory> factories;
 
-    public FactoryAdapter(List<FactoryModel> factories) {
+    public FactoryAdapter(List<Factory> factories) {
         this.factories = factories;
     }
 
@@ -30,6 +31,8 @@ public class FactoryAdapter extends RecyclerView.Adapter<FactoryAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
+        Factory factory = factories.get(position);
+        holder.bind(factory);
     }
 
     @Override
@@ -39,10 +42,15 @@ public class FactoryAdapter extends RecyclerView.Adapter<FactoryAdapter.ViewHold
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView description = itemView.findViewById(R.id.factoryDescription);
+        TextView name = itemView.findViewById(R.id.factoryName);
+        TextView phone = itemView.findViewById(R.id.factoryPhone);
 
-        public void bind (FactoryModel factory){
-            super();
-            itemView.;
+        public void bind (Factory factory){
+            description.setText(factory.getDescricaoCurta());
+            name.setText(factory.getNome());
+            phone.setText(factory.getTelefone1());
+
         }
         public ViewHolder(@NonNull View v) {
             super(v);
