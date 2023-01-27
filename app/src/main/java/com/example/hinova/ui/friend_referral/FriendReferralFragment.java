@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hinova.ui.friend_referral.R;
+import com.example.hinova.R;
 
 public class FriendReferralFragment extends Fragment {
 

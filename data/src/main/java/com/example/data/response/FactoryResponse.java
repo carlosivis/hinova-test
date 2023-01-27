@@ -6,11 +6,14 @@ import java.io.Serializable;
 import java.util.List;
 
 public class FactoryResponse implements Serializable {
-    @SerializedName("ListaOficinas")private List<? extends Factory> ListaOficinas;
+    @SerializedName("ListaOficinas")
+    private List<? extends Factory> ListaOficinas;
 
-    @SerializedName("RetornoErro")private ErroResponse RetornoErro;
+    @SerializedName("RetornoErro")
+    private String RetornoErro;
 
-    @SerializedName("Token")private Token Token;
+    @SerializedName("Token")
+    private String Token;
 
     public List<? extends Factory> getListaOficinas() {
         return this.ListaOficinas;
@@ -20,16 +23,21 @@ public class FactoryResponse implements Serializable {
         this.ListaOficinas = ListaOficinas;
     }
 
-    public ErroResponse getRetornoErro() {
+    public String getRetornoErro() {
         return this.RetornoErro;
     }
 
-    public void setRetornoErro(ErroResponse RetornoErro) {
+    public void setRetornoErro(String RetornoErro) {
         this.RetornoErro = RetornoErro;
     }
 
+    public String getToken() {
+        return this.Token;
+    }
 
-
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
 
 }
 

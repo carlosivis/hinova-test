@@ -1,20 +1,31 @@
-package com.example.domain.model;
+package com.example.data.request;
 
+import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
 public class Referral {
-        private int CodigoAssociacao ;
-        public Date DataCriacao ;
-        private String CpfAssociado ;
-        private String EmailAssociado ;
-        private String NomeAssociado ;
-        private String TelefoneAssociado ;
-        private String PlacaVeiculoAssociado ;
-        private String NomeAmigo ;
-        private String TelefoneAmigo ;
-        private String EmailAmigo ;
-        private String Observacao ;
+        @SerializedName("CodigoAssociacao")
+        private int CodigoAssociacao;
+        public Date DataCriacao;
+        @SerializedName("CpfAssociado")
+        private String CpfAssociado;
+        @SerializedName("EmailAssociado")
+        private String EmailAssociado;
+        @SerializedName("NomeAssociado")
+        private String NomeAssociado;
+        @SerializedName("TelefoneAssociado")
+        private String TelefoneAssociado;
+        @SerializedName("PlacaVeiculoAssociado")
+        private String PlacaVeiculoAssociado;
+        @SerializedName("NomeAmigo")
+        private String NomeAmigo;
+        @SerializedName("TelefoneAmigo")
+        private String TelefoneAmigo;
+        @SerializedName("EmailAmigo")
+        private String EmailAmigo;
+        @SerializedName("Observacao")
+        private String Observacao;
 
         public int getCodigoAssociacao() {
             return CodigoAssociacao;

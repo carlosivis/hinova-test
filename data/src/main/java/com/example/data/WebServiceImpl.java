@@ -1,37 +1,35 @@
 package com.example.data;
 
-import com.example.data.request.ReferralRequest;
-import com.example.data.response.Factory;
-import com.example.domain.model.Referral;
+
+import com.example.data.mappers.ModelMappers;
+import com.example.domain.model.FactoryModel;
+import com.example.domain.model.ReferralModel;
 import com.example.domain.repository.WebRepository;
 
-import java.util.List;
-
-import retrofit2.Call;
+import okhttp3.Request;
 import retrofit2.Response;
 
 public class WebServiceImpl implements WebRepository {
     Service service = new Service();
 
     @Override
-    public List<Factory> listFactory() {
-
+    public FactoryModel listFactory() {
         try {
-            //TODO: mappers
-            return Response.success(service.WebService().listFactory().request());
-        } catch (Throwable throwable) {
-            //TODO: make throwable
-//            Response.error(throwable.toString())
+             Response<Request> response = Response.success(service.WebService().listFactory().request());
+             return (FactoryModel) new ModelMappers().map(response.body());
+
+        } catch (Throwable t) {
+            t.printStackTrace();
         }
+        return null;
     }
 
     @Override
-    public ReferralRequest postReferral(ReferralRequest referral) {
+    public void postReferral(final ReferralModel referral) {
         try {
-            //TODO: mappers
-            return Response.success(service.WebService().referralSend(referral).request());
-        } catch (Throwable throwable) {
-            //TODO: make throwable
+            Response.success(service.WebService().referralSend(new ModelMappers().map(referral)).execute());
+        } catch (Throwable t) {
+            t.printStackTrace();
         }
     }
 }

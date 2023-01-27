@@ -6,11 +6,5 @@ public class Token implements Serializable {
 
     private String Token;
 
-    public String getToken() {
-        return this.Token;
-    }
 
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
 }
